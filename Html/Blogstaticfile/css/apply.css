@@ -1,0 +1,39 @@
+@charset "utf-8";
+body { margin:0; padding:0; width:100%; color:#959595; font:normal 12px/1.8em Arial, Helvetica, sans-serif; background:repeat center center;}
+h1 small { display:block; font:normal 12px/1.2em Arial, Helvetica, sans-serif; color:#8b8b8b; letter-spacing:normal;float:right;}
+h2 { font:normal 24px/1.5em Arial, Helvetica, sans-serif; padding:8px 0; margin:8px 0; color:#323a3f;}
+
+
+/* input */
+.input_short {margin:6px 4px;width:150px;height:20px;}
+.mainbar .article form {margin:0 4px;}
+.content .mainbar .article .table_list th {text-align:right;font:normal 12px/1.8em Arial, Helvetica, sans-serif;}
+.input_middle {margin:4px 0;height:20px;width:500px;}
+.input_long {margin:4px 0;height:100px;width:500px;}
+.content .mainbar .article .table_radio td {width:120px;}
+.content .mainbar .article .table_radio td label{margin:0;padding:0;}
+.content .mainbar .article li {margin-top:0px;}
+.content .mainbar .article .table_feedback td {width:200px;}
+.line {margin:20px 0;border-bottom:1px solid #BCD2E6;}
+.line1 {margin:10px 10px;border-bottom:1px solid #BCD2E6;}
+.content .mainbar .article .table_list_3 td {width:200px;height:40px;}
+.content .mainbar .article .table_list_3 longtd {width:500px;}
+
+
+/* footer */
+.footer_resize { margin:0 auto; padding:10px; width:922px; background:url(repeat-x center top;}
+.footer p.lf { margin:0; padding:4px 0; float:right; width:auto; line-height:1.5em;}
+.footer p.lf a { color:#62bee3;}
+ul.fmenu { margin:0; padding:2px 0; list-style:none; float:left; width:auto;}
+ul.fmenu li { margin:0; padding:0 8px 0 0; float:left;}
+ul.fmenu li a { color:#959595; text-decoration:none; padding:6px 16px;}
+ul.fmenu li a:hover, ul.fmenu li.active a { color:#62bee3;}
+ul.fmenu li a:hover { text-decoration:underline;}
+
+/* form */
+ol { list-style:none;}
+ol li { display:block; clear:both;}
+ol li label { display:block; margin:0; padding:16px 0 0 0;}
+ol li input.text { width:480px; border:1px solid #c0c0c0; margin:2px 0; padding:5px 2px; height:16px; background:#fff;}
+ol li textarea { width:480px; border:1px solid #c0c0c0; margin:2px 0; padding:2px; background:#fff;}
+ol li .send { margin:16px 0 0 0;}
