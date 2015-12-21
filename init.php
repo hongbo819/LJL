@@ -1,7 +1,4 @@
 <?php
-
-//error_reporting(0);
-
 if (!defined('IN_PRODUCTION'))
 {
 	die('Hacking attempt');
