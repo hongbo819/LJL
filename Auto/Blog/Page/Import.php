@@ -211,6 +211,6 @@ class Auto_Blog_Page_Import extends Auto_Blog_Page_Abstract
      * 尽量不要删、个别要求、个别处理就行
      */
     private function deleteFormSolr(){
-        //http://115.28.237.52:8983/solr/cui_blog/update/?stream.body=<delete><id>68</id></delete>&stream.contentType=text/xml;charset=utf-8&commit=true
+        //http://localhost:8983/solr/cui_blog/update/?stream.body=<delete><id>68</id></delete>&stream.contentType=text/xml;charset=utf-8&commit=true
     }
 }

@@ -82,11 +82,11 @@
     <div class="ydcontent">
         <div style="margin-left: 2em" class="c5">
             <ul>
-                <?php foreach($newCommentsList as $atcInfo){ ?>
+                <?php foreach($newCommentsList as $atcInfo){ if($atcInfo['id']){?>
                     <li>
                         <a href="<?=Blog_Plugin_Urls::getDetailUrl(array('articleid'=>$atcInfo['id']))?>" title="<?=$atcInfo['title']?>"><?=$atcInfo['title']?></a>
                     </li>
-                <?php }?>
+                <?php }}?>
             </ul>
         </div>
     </div>

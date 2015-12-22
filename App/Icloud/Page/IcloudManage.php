@@ -2,7 +2,7 @@
 /**
 * Icloud管理器
 */
-//http://Icloud.cuihongbo.com/index.php?c=IcloudManage&showFunName=MobileSoft::getInfo
+//http://icloud-de.zhbor.com/index.php?c=IcloudManage
 class Icloud_Page_IcloudManage extends LJL_Abstract_Page
 {
     private $helperCfgArr = array();
