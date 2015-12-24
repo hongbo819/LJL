@@ -21,10 +21,12 @@
                             <?php if(!$articleInfo['source']){?>【原创】<?php }?><a href="<?=Blog_Plugin_Urls::getDetailUrl(array('articleid'=>$articleInfo['id']))?>" title="<?=htmlspecialchars_decode($articleInfo['title'])?>"><?=htmlspecialchars_decode($articleInfo['title'])?></a>
                         </h1>
                         <ul class="cl" id="article_info">
-                            <li>分类：<a href="<?=Blog_Plugin_Urls::getListUrl(array('cate'=>$articleInfo['cate']))?>" target="_blank" title="<?=$cateList[$articleInfo['cate']][0]?>" class="category"><?=$cateList[$articleInfo['cate']][0]?></a>&nbsp;&nbsp;<span>发布于<?=date('Y-m-d H:i:s', $articleInfo['insertTime'])?></span>
-                            </li>
-                            <li>查看数: <?=$articleInfo['view']?>
-                            </li>
+                            <li>分类：<b><a href="<?=Blog_Plugin_Urls::getListUrl(array('cate'=>$articleInfo['cate']))?>" target="_blank" title="<?=$cateList[$articleInfo['cate']][0]?>" class="category"><?=$cateList[$articleInfo['cate']][0]?></a></b></li>
+                            <li>发布时间：<b><?=date('Y-m-d H:i:s', $articleInfo['insertTime'])?></b></li>
+                            <?php if(!$articleInfo['source']){?>
+                            <li>作者：<b><?=BLOG_WEB_NAME?></b></li>
+                            <?php }?>
+                            <li>查看数: <b><?=$articleInfo['view']?></b></li>
                         </ul>
                         <div class="content" id="content">
                             <?=htmlspecialchars_decode($articleInfo['content'])?>
