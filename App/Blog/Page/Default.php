@@ -50,9 +50,9 @@ class Blog_Page_Default extends Blog_Page_Abstract
         
         //面包屑导航
         $nav[0]['title'] = '首页';
-        
+        $pageTitle = $page>1 ? '-第'.$page.'页' : '';
         //seo
-        $output->seoArr = array('title' => '首页  － '.BLOG_SEO_TITTLE.'-第'.$page.'页　| 最红博 ');
+        $output->seoArr = array('title' => '首页  － '.BLOG_SEO_TITTLE.$pageTitle.'　| 最红博 ');
         
         $output->nav           = $nav;
         $output->cate           = '';
