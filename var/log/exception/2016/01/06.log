@@ -1,0 +1,31 @@
+
+
+===========================================================================
+time:2016/01/06 12:42:31
+
+Stack trace:
+Exception 'LJL' with message 'The file dose not exist: '/www/LJL/App/Blog/Page/Ajax/article.php'' 
+#1 /www/LJL/Html/Blog_share/index.php(50):
+LJL_Controller_Front::run()  
+#2 /www/LJL/LJL/Controller/Front.php(49):
+spl_autoload_call('Blog_Page_Ajax_article')  
+Debug Info:
+151 		}
+
+152 		
+
+153 		if (! file_exists($file))
+
+154 		{
+
+ >>155 			throw new LJL_Exception(&quot;The file dose not exist: '{$file}'&quot;);
+
+156 		}
+
+157 		if (! is_readable($file))
+
+158 		{
+
+159 			throw new LJL_Exception(&quot;The file can not read: '{$file}'&quot;);
+
+160 		}
