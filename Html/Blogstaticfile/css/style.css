@@ -1722,11 +1722,14 @@ body {
 	padding: 0 0 5px;
 
 }
-
+.detail_title {
+	text-align:center;
+}
 .detail_title a {
-
 	color:#40AA53
-
+}
+.detail_title span {
+	font-size:15px;
 }
 
 #article_info {
