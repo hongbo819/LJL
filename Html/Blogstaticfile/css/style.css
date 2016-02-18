@@ -1747,11 +1747,8 @@ body {
 }
 
 #article_info li {
-
-	float: left;
-
+	display:inline;
 	margin-right: 8px;
-
 }
 
 #article_info li.category {
