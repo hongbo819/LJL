@@ -80,7 +80,7 @@ class Blog_Page_Default extends Blog_Page_Abstract
 // 	    setcookie('userProvinceId2', 'aaa', SYSTEM_TIME + 86400, '/', '.zhbor.com');
 // 	    die();
 	    LJL_Http::setExpires(3600);
-	    $nearTime = SYSTEM_TIME-60*24*3600;
+	    $nearTime = SYSTEM_TIME-30*24*3600;
 	    //最热10篇
 	    $hotList = Helper_Blogconfig::getBlogRankList(array(
 		        'fields' => array('webSite', 'articleId', 'title', 'cate', 'cateVal', 'score', 'publishTime'),//要查询的字段
