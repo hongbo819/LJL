@@ -144,11 +144,12 @@
 		 */
 		public static function getBlogRankList($paramArr) {
 		    $options = array(
-		        'page'     => 1,//当前页
-		        'pageSize' => 10,//limit
-		        'fields'   => array(),//要查询的字段
-		        'isCount'  => 0, //是否是查询总数
-		        'order'    => 'order by id desc',
+		        'page'        => 1,//当前页
+		        'pageSize'    => 10,//limit
+		        'fields'      => array(),//要查询的字段
+		        'isCount'     => 0, //是否是查询总数
+		        'publishTime' => 0,
+		        'order'       => 'order by id desc',
 		    );
 		    if (is_array($paramArr))$options = array_merge($options, $paramArr);
 		    extract($options);
@@ -157,7 +158,8 @@
 		    $limit      = ' limit '.($page-1)*$pageSize.','.$pageSize;
 		    
 		    $where = ' where 1=1 ';
-		    
+		    if($publishTime)
+		        $where .= " and publishTime>'{$publishTime}' ";
 		    $db = Db_Blogconfig::instance();
 		    if($isCount){
 		        $sql = "select count(*) from blog_hotnew_list {$where}";

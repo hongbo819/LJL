@@ -80,18 +80,35 @@ class Blog_Page_Default extends Blog_Page_Abstract
 // 	    setcookie('userProvinceId2', 'aaa', SYSTEM_TIME + 86400, '/', '.zhbor.com');
 // 	    die();
 	    LJL_Http::setExpires(3600);
+	    $nearTime = SYSTEM_TIME-60*24*3600;
 	    //最热10篇
 	    $hotList = Helper_Blogconfig::getBlogRankList(array(
 		        'fields' => array('webSite', 'articleId', 'title', 'cate', 'cateVal', 'score', 'publishTime'),//要查询的字段
                         'pageSize' => 15,
 		        'order'  => 'order by score desc',
+	            'publishTime'  => $nearTime,
 		    ));
+	    if(count($hotList) < 10){
+	        $hotList = Helper_Blogconfig::getBlogRankList(array(
+		        'fields' => array('webSite', 'articleId', 'title', 'cate', 'cateVal', 'score', 'publishTime'),//要查询的字段
+                        'pageSize' => 15,
+		        'order'  => 'order by score desc',
+		    ));
+	    }
 	    //最新10篇
 	    $newList = Helper_Blogconfig::getBlogRankList(array(
 	        'fields' => array('webSite', 'articleId', 'title', 'cate', 'cateVal', 'score', 'publishTime'),//要查询的字段
                 'pageSize' => 15,
 	        'order'  => 'order by publishTime desc',
+	        'publishTime'  => $nearTime,
 	    ));
+	    if(count($newList) < 10){
+	        $newList = Helper_Blogconfig::getBlogRankList(array(
+    	        'fields' => array('webSite', 'articleId', 'title', 'cate', 'cateVal', 'score', 'publishTime'),//要查询的字段
+                    'pageSize' => 15,
+    	        'order'  => 'order by publishTime desc',
+    	    ));
+	    }
 	    //推荐10篇
 	    $recommendList = Helper_Blogconfig::getBlogRankList(array(
 	        'fields' => array('webSite', 'articleId', 'title', 'descript', 'cate', 'cateVal', 'score', 'publishTime'),//要查询的字段
