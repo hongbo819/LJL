@@ -55,7 +55,7 @@ class Blog_Page_Default extends Blog_Page_Abstract
         $output->seoArr = array('title' => BLOG_SEO_TITTLE.$pageTitle.'　| 最红博 ');
         
         $output->nav           = $nav;
-        $output->cate           = '';
+        $output->cate          = '';
         $output->tag           = '';
         $output->cateList      = $cateList;
         $output->pageStr       = $pageStr;

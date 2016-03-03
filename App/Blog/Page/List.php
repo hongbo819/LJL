@@ -79,10 +79,11 @@
 		            $nav[2]['title'] = $tag;
 		        }
 		    }
+		    $pageTitle = $page>1 ? '-第'.$page.'页' : '';
 		    
 		    //seo
 		    $seoTitle = $cate ? ($tag ? $cateList[$cate][0].'分类 - '.$tag.'标签' : $cateList[$cate][0].'分类'): $tag.'标签';
-		    $output->seoArr = array('title' => $seoTitle.'-第'.$page.'页 － '.BLOG_SEO_TITTLE.'　| 最红博 ');
+		    $output->seoArr = array('title' => $seoTitle.$pageTitle.' － '.BLOG_SEO_TITTLE.'　| 最红博 ');
             
             $output->tagsArr       = $tagsArr;
             $output->cate          = $cate;
