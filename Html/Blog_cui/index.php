@@ -10,7 +10,7 @@ define('APP_PATH', PRODUCTION_ROOT . '/App/' . APP_NAME); // 配置实例的APP�
 define('APP_BLOG_NAME', 'cui'); // 配置博客名称
 define('BLOG_WEB_NAME', 'Ferman'); // 配置博客名称
 define('BLOG_SEO_TITTLE', 'Ferman的博客-懂生活的技术man'); // 配置title
-define('WEIBO_UID', '2004858905'); // 配置微博uid
+define('WEIBO_UID', '2004858905'); // 配置微博uid 
 
 //上传图片文件夹
 define('UPLOAD_IMG_PATH', '/www/img/');
