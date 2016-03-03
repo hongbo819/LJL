@@ -9,7 +9,7 @@ define('APP_PATH', PRODUCTION_ROOT . '/App/' . APP_NAME); // 配置实例的APP�
 //到后期这些配置的东西过多的时候，则要放到配置文件中
 define('APP_BLOG_NAME', 'cui'); // 配置博客名称
 define('BLOG_WEB_NAME', '时空蚂蚁'); // 配置博客名称
-define('BLOG_SEO_TITTLE', BLOG_WEB_NAME.'-分享编程技术与生活点滴感悟'); // 配置title
+define('BLOG_SEO_TITTLE', BLOG_WEB_NAME.'-Ferman的博客'); // 配置title
 define('WEIBO_UID', '2004858905'); // 配置微博uid
 
 //上传图片文件夹
