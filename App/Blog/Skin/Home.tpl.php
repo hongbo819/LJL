@@ -1,10 +1,10 @@
         <?=$header?>
         <div id="header">
-            <div class="wp cl">
+            <div class="wp wpmain cl">
                 <h2 id="logo">
                     <a href="<?=WWW_WEB?>" title="<?=BLOG_WEB_NAME?>"><?=BLOG_WEB_NAME?></a>
                 </h2>
-                <span style="color:white;position:relative;left:-75px;top:20px;">--让你拥有自己专业的独立博客站</span>
+                <span style="color:white;position:relative;left:-45px;top:20px;">--让你拥有自己专业的独立博客站</span>
             </div>
         </div>
         <div class="wpmain" id="wp">
