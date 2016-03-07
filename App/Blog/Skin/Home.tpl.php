@@ -7,7 +7,7 @@
                 <span style="color:white;position:relative;left:-75px;top:20px;">--让你拥有自己专业的独立博客站</span>
             </div>
         </div>
-        <div class="wp" id="wp">
+        <div class="wpmain" id="wp">
             <div class="wp area2 cl cm_mb">
                 <div class="cm_L">
                     <div class="news_nav">

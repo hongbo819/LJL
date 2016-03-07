@@ -656,7 +656,7 @@ body {
 
 #header .wp #logo {
 
-	margin-right:20px;
+	margin-right:-10px;
 
 	padding:0 20px 0 0;
 
@@ -792,6 +792,13 @@ body {
 	margin:0 auto;
 
 	width:1000px;
+
+}
+.wpmain {
+
+	margin:0 auto;
+
+	width:1220px;
 
 }
 
