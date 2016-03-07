@@ -176,7 +176,7 @@ body {
 
 .a1L {
 
-	width:900px;
+	width:720px;
 
 	float:left;
 
@@ -184,7 +184,7 @@ body {
 
 .a1R {
 
-	width:300px;
+	width:260px;
 
 	float:right;
 
@@ -772,14 +772,12 @@ body {
 
 }
 #login-button{
-	float:left;
-	position:absolute;
-	top:12px;
-	right:10px;
+	float:right;
 }
 #login-button a{
 	display:inline-block;
-
+	height:45px;
+	line-height:46px;
 	font-size:14px;
 
 	text-decoration:none;
@@ -793,7 +791,7 @@ body {
 
 	margin:0 auto;
 
-	width:1220px;
+	width:1000px;
 
 }
 
@@ -1193,7 +1191,6 @@ body {
 
 .searchBlk div {
 
-	width:280px;
 
 	height:30px;
 
@@ -1271,7 +1268,7 @@ body {
 
 .search_goal p {
 
-	width:209px;
+	width:180px;
 
 	height:28px;
 
@@ -1285,7 +1282,7 @@ body {
 
 .search_goal .search_goal_input {
 
-	width:200px;
+	width:180px;
 
 	display:block;
 
@@ -1307,7 +1304,7 @@ body {
 
 .search_goal .search_goal_btn {
 
-	width:68px;
+	width:58px;
 
 	height:30px;
 

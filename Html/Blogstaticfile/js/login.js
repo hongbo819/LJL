@@ -173,7 +173,7 @@ $("#user-register").live('click', function(e){
 		async:true,
 		success:function(apiDate){
 			if(apiDate == 'ok'){
-				var loginEle = '<a id="login_sign">'+username+'</a>^<a href=":;" id="login_out">退出</a>';
+				var loginEle = '<a id="login_sign">'+username+'</a>&nbsp;&nbsp;<a href=":;" id="login_out">退出</a>';
 				document.getElementById('login-button').innerHTML = loginEle;
 				hideAll();
 			}else{
@@ -214,9 +214,9 @@ $("#user-login").live('click', function(e){
 		success:function(apiDate){
 			if(apiDate.indexOf('ok')>-1){
 				if(apiDate.indexOf('_adm')>-1){
-					var loginEle = '<a target="_blank" href="'+mainPage+'index.php?c=admin&a=list">后台管理</a>^<a id="login_sign">'+apiDate.replace(/_ok_adm/,"")+'</a>^<a href=":;" id="login_out">退出</a>';
+					var loginEle = '<a target="_blank" href="'+mainPage+'index.php?c=admin&a=list">后台管理</a>&nbsp;&nbsp;<a id="login_sign">'+apiDate.replace(/_ok_adm/,"")+'</a>&nbsp;&nbsp;<a href=":;" id="login_out">退出</a>';
 				}else{
-					var loginEle = '<a id="login_sign">'+apiDate.replace(/_ok/,"")+'</a>^<a href=":;" id="login_out">退出</a>';
+					var loginEle = '<a id="login_sign">'+apiDate.replace(/_ok/,"")+'</a>&nbsp;&nbsp;<a href=":;" id="login_out">退出</a>';
 				}
 				document.getElementById('login-button').innerHTML = loginEle;
 				hideAll();
@@ -259,9 +259,9 @@ $(function(){
 	if(username){
 		var manageStr = '';
 		if(readCookie('mda_')){
-			manageStr += '<a target="_blank" href="'+mainPage+'index.php?c=admin&a=list">后台管理</a>^';
+			manageStr += '<a target="_blank" href="'+mainPage+'index.php?c=admin&a=list">后台管理</a>&nbsp;&nbsp;';
 		}
-		var loginEle = manageStr+'<a id="login_sign">'+decodeURI(username)+'</a>^<a href=":;" id="login_out">退出</a>';
+		var loginEle = manageStr+'<a id="login_sign">'+decodeURI(username)+'</a>&nbsp;&nbsp;<a href=":;" id="login_out">退出</a>';
 		document.getElementById('login-button').innerHTML = loginEle;
 	}
 });
