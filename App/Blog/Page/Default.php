@@ -113,7 +113,8 @@ class Blog_Page_Default extends Blog_Page_Abstract
 	    $recommendList = Helper_Blogconfig::getBlogRankList(array(
 	        'fields' => array('webSite', 'articleId', 'title', 'descript', 'cate', 'cateVal', 'score', 'publishTime'),//要查询的字段
                 'pageSize' => 10,
-	        'order'  => 'order by isRecommend desc,score desc',
+	        'order'  => 'order by isRecommend desc,score desc,publishTime desc',
+	        'publishTime'  => $nearTime,
 	    ));
 	    //博主100个
 	    $bloggerList = Helper_Blogconfig::getAdminList(array(
