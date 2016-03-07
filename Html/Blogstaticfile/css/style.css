@@ -504,7 +504,7 @@ body {
 .content {
 	font-size:15px;
 	padding-top:15px;
-	max-width:900px;
+	max-width:720px;
 	overflow: hidden;
 }
 
@@ -1372,7 +1372,7 @@ body {
 
 .plist, .p_l, .p_r, .hotB, .priceB {
 
-	height: 110px;
+	height: 120px;
 
 }
 
@@ -1608,7 +1608,7 @@ body {
 
 .p_r {
 
-	width: 825px;
+	width: 700px;
 
 }
 
