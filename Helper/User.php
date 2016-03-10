@@ -35,4 +35,20 @@
 	        $db->query($sql);
 	        return $db->lastInsertId(); 
 	    }
+	    /**
+	     * 插入聊天库数据
+	     */
+	    public static function insertChatuser($paramArr) {
+	        $options = array(
+	            'insertData' =>  array(), #array('name'=>'cuihb');
+	        );
+	        if (is_array($paramArr))$options = array_merge($options, $paramArr);
+	        extract($options);
+	        
+	        $formatData = self::setInsertCondition($insertData);
+	        $sql = "REPLACE INTO webchat_user({$formatData['fileds']}) VALUES({$formatData['values']})";
+	        $db = Db_Webchat::instance();
+	        $db->query($sql);
+	        return $db->lastInsertId();
+	    }
 	}

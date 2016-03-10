@@ -25,18 +25,18 @@ class Blog_Page_Ajax_User extends Blog_Page_Abstract{
         ));
          
         $userInfo = LJL_Api::run('Open.Sina.getUserInfo' , array(
-            'apiuid'        =>$tokenInfo['uid'],
-            'accessToken'=>$tokenInfo['access_token'],
+            'apiuid'      =>$tokenInfo['uid'],
+            'accessToken' =>$tokenInfo['access_token'],
         ));
         
         $userMapInfo = array(
-            'api_uid' => $tokenInfo['uid'],
-            'api_name' => $userInfo['screen_name'],
+            'api_uid'     => $tokenInfo['uid'],
+            'api_name'    => $userInfo['screen_name'],
             'api_headimg' => $userInfo['profile_image_url'],
-            'api_token' => $tokenInfo['access_token'],
-            'api_type'  => 'sina',
-            'expires_tm' => $tokenInfo['expires_in'],
-            'tm' => SYSTEM_TIME,
+            'api_token'   => $tokenInfo['access_token'],
+            'api_type'    => 'sina',
+            'expires_tm'  => $tokenInfo['expires_in'],
+            'tm'          => SYSTEM_TIME,
         );
         $this->doRegister($input, $output, $userMapInfo);
     }
@@ -68,11 +68,10 @@ class Blog_Page_Ajax_User extends Blog_Page_Abstract{
         $email     = $input->post('email');
         $password1 = $input->post('password1');
         $password2 = $input->post('password2');
-        
         //第三方平台登录 sina
         if($openUserInfo){
-            $email = '';
-            $userName = $openUserInfo['api_name'];
+            $email     = '';
+            $userName  = $openUserInfo['api_name'];
             $password1 = $password2 = $openUserInfo['api_token'];
         }
         
@@ -103,10 +102,24 @@ class Blog_Page_Ajax_User extends Blog_Page_Abstract{
             ));
             if($lastId){ $msg = 'ok'; }
             
+            //以下代码是以sina接口数据打通
             if($openUserInfo){
                 $openUserInfo['app_uid'] = $lastId;
                 Helper_User::insertUserMap(array('insertData'=>$openUserInfo));
             }
+            
+            //以下代码是用户与聊天项目数据库打通
+            Helper_User::insertChatuser(array(
+                'insertData' => array(
+                    'accountid' => $userName,
+                    'username'  => $userName,
+                    'dept'      => $ipInfo['country'],
+                    'email'     => $email,
+                    'deptDetail'=> $ipInfo['country'],
+                    'updateTime'=> SYSTEM_TIME,
+                ),
+            ));
+            
         }
 	    setcookie('blog_username', urlencode($userName), SYSTEM_TIME+3600*24*30, '/', ".".Blog_Plugin_Common::getHost());
 	    setcookie('blog_ckid', $ckid, SYSTEM_TIME+3600*24*30, '/', ".".Blog_Plugin_Common::getHost());

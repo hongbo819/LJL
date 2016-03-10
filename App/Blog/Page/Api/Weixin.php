@@ -19,7 +19,7 @@
 		/**
 		 * 微信信息接口 http://www.zhbor.com/index.php?c=Api_Weixin&a=Weixin
 		 * 
-		 * 接口实现用户回复数字 返回数字对应的分类文章的url
+		 * 接口实现用户回复数字 返回数字对应的分类文章的url 关注微信 爱科技：hongbozxz
 		 */
 		public function doWeixin(LJL_Request $input, LJL_Response $output){
 		    $articleCate = array(
