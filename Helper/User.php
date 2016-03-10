@@ -10,12 +10,14 @@
 	    public static function getApiUserInfo($paramArr){
 	        $options = array(
 	            'apiuid' => '',
+	            'apiname'=> '',
 	        );
 	        if (is_array($paramArr))$options = array_merge($options, $paramArr);
 	        extract($options);
 	        
-	        if(!$apiuid) return false;
-	        $sql = "select * from api_user_map where api_uid={$apiuid} ";
+	        if(!$apiuid && !$apiname) return false;
+	        $where = $apiuid ? " where apiuid={$apiuid} " : " where api_name='{$apiname}' ";
+	        $sql = "select * from api_user_map {$where} ";
 	        $db = Db_User::instance();
 	        return $db->getRow($sql);
 	    }

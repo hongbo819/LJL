@@ -17,7 +17,11 @@
                 <li class="ds-post">
                     <div class="ds-post-self">
                         <div class="ds-avatar">
-                            <img src="<?=$_SFP?>images/noavatar_default.png" alt="<?=$val['user']?>">
+                            <?php 
+                            $apiuerInfo = Helper_User::getApiUserInfo(array('apiname'=>$val['user']));
+                            $headImg = $apiuerInfo ? $apiuerInfo['api_headimg'] : $_SFP.'images/noavatar_default.png';
+                            ?>
+                            <img src="<?=$headImg?>" alt="<?=$val['user']?>">
                         </div>
                         <div class="ds-comment-body">
                             <div class="ds-comment-header">

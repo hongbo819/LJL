@@ -102,7 +102,7 @@ class Blog_Page_Ajax_User extends Blog_Page_Abstract{
             ));
             if($lastId){ $msg = 'ok'; }
             
-            //以下代码是以sina接口数据打通
+            //以下代码是以sina接口数据库打通
             if($openUserInfo){
                 $openUserInfo['app_uid'] = $lastId;
                 Helper_User::insertUserMap(array('insertData'=>$openUserInfo));
