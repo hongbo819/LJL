@@ -35,6 +35,9 @@ if(IS_DEBUGGING){
     error_reporting(0);
 }
 
+//性能监控
+include '/www/eagle/xhprof/xhprof.php';
+
 //LJL框架，需要先引入私有云
 require('/APILJL/Api.php');
 require_once(PRODUCTION_ROOT . '/init.php');
