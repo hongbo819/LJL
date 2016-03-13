@@ -121,8 +121,8 @@ class Blog_Page_Ajax_User extends Blog_Page_Abstract{
             ));
             
         }
-	    setcookie('blog_username', urlencode($userName), SYSTEM_TIME+3600*24*30, '/', ".".Blog_Plugin_Common::getHost());
-	    setcookie('blog_ckid', $ckid, SYSTEM_TIME+3600*24*30, '/', ".".Blog_Plugin_Common::getHost());
+	    setcookie('blog_username', urlencode($userName), SYSTEM_TIME+3600*24*3600, '/', ".".Blog_Plugin_Common::getHost());
+	    setcookie('blog_ckid', $ckid, SYSTEM_TIME+3600*24*3600, '/', ".".Blog_Plugin_Common::getHost());
 		
 	    if($openUserInfo){
 	        $goHistory = isset($_SERVER['HTTP_REFERER']) ? -1 : -2;
@@ -163,8 +163,8 @@ class Blog_Page_Ajax_User extends Blog_Page_Abstract{
             ),
         ));
         
-        setcookie('blog_username', urlencode($userInfo['username']), SYSTEM_TIME+3600*24*30, '/', ".".Blog_Plugin_Common::getHost());
-        setcookie('blog_ckid', Blog_Plugin_Common::ckid($userInfo['username']), SYSTEM_TIME+3600*24*30, '/', ".".Blog_Plugin_Common::getHost());
+        setcookie('blog_username', urlencode($userInfo['username']), SYSTEM_TIME+3600*24*3600, '/', ".".Blog_Plugin_Common::getHost());
+        setcookie('blog_ckid', Blog_Plugin_Common::ckid($userInfo['username']), SYSTEM_TIME+3600*24*3600, '/', ".".Blog_Plugin_Common::getHost());
         
         if(Helper_Blogconfig::getAdminInfo(array('username'=>$userInfo['username'], 'password'=>md5($password.'_'), 'website'=>APP_BLOG_NAME))){
             setcookie('mda_', '@#%^&', SYSTEM_TIME+3600*24*30, '/');
