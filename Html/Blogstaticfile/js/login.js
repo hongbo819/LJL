@@ -6,7 +6,7 @@ function showMask(){
 }
 //让指定的DIV始终显示在屏幕正中间
 function letDivCenter(divName){ 
-	var top = ($(window).height() - $(divName).height())/2; 
+	var top = ($(window).height() - $(divName).height())/3; 
 	var left = ($(window).width() - $(divName).width())/2; 
 	var scrollTop = $(document).scrollTop(); 
 	var scrollLeft = $(document).scrollLeft(); 

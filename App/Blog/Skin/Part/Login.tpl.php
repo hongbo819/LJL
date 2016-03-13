@@ -4,14 +4,14 @@
 ?>
 <div id="mask" class="mask"></div>
 <div id="model" class="model">
-	<a id="click-close" href='javascript:;' onclick='hideAll()'>关闭</a>
+	<span>账户信息</span>
+	<a id="click-close" href='javascript:;' onclick='hideAll()'>×</a>
 	<?php if($pageType == 'login'){?>
 	       <form id="user-login-form" action='' method='post'>
         		用户名/邮箱：<input type='text' name='username' autofocus required><br/>
         		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         		密 码：<input type='password' name='password' required><br/>
-        		<input id="user-login" type='submit' name='submit-btn' value="登录"> &nbsp;&nbsp;&nbsp;<a href="javascript:;" onclick="showAll('#model', 'showregister')">注册</a>
-        		<br/><br/><a href="<?=$loginurl?>">微博登录</a>
+        		<input id="user-login" type='submit' name='submit-btn' value="登录"> &nbsp;&nbsp;<a href="javascript:;" onclick="showAll('#model', 'showregister')">注册</a> &nbsp;&nbsp;<a href="<?=$loginurl?>">微博登录</a>
         	</form>
 	       <?php 
 	   }elseif($pageType == 'register'){?>
@@ -20,8 +20,7 @@
         		邮&nbsp;&nbsp;&nbsp;&nbsp;箱：<input type='email' name='email' required><br/>
         		密&nbsp;&nbsp;&nbsp;&nbsp;码：<input type='password' name='password1'><br/>
         		密&nbsp;&nbsp;&nbsp;&nbsp;码：<input type='password' name='password2'><br/>
-        		<input id="user-register" type='submit' name='submit-btn' value="注册"> &nbsp;&nbsp;&nbsp;<a href="javascript:;" onclick="showAll('#model', 'showlogin')">登陆</a>
-        	   <br/><a href="<?=$loginurl?>">微博登录</a>
+        		<input id="user-register" type='submit' name='submit-btn' value="注册"> &nbsp;&nbsp;<a href="javascript:;" onclick="showAll('#model', 'showlogin')">登陆</a> &nbsp;&nbsp;<a href="<?=$loginurl?>">微博登录</a>
         	</form>
 	       <?php }?>
 </div>

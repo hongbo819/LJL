@@ -2042,8 +2042,14 @@ a.tag.hover {
 }
 /*login 弹窗*/
 #user-login, #user-register {
+	color:white;
 	background: #40AA53;
 	cursor:pointer;
+	padding:4px;
+	border:1px;
+	border-radius:0.5em;
+	width:50px;
+	font-size:15px;
 }
 .mask {  
 	position: absolute; top: 0px; filter: alpha(opacity=60); background-color: #777;
@@ -2052,19 +2058,28 @@ a.tag.hover {
 }
 .model{
 	position: absolute; z-index: 1003; 
-	padding: 30px;
-	width:300px; height:150px; text-align:center;
+	padding: 21px;
+	width:326px; height:auto; text-align:center;
 	background-color:white; display: none;
-	border:solid 2px #40AA53;
+	border:solid 6px #40AA53;
 	border-top:solid 30px #40AA53;
+	border-radius:0.3em;
 }
 .model input{
 	margin: 5px;
 }
 .model #click-close{
-	position:absolute; top:0; right:0;
+	position:absolute; top:0; right:8px;
 }
-.model a{
+.model span{
+	position:absolute; top:0; left:8px;
+}
+.model div a{
+	padding:2px;
+	bottom:24px;
+	position:absolute;
+}
+.model #click-close, .model span{
 	display:inline-block;
 	color:white;
 	font-size:14px;
