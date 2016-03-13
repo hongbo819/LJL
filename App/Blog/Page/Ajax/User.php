@@ -129,7 +129,7 @@ class Blog_Page_Ajax_User extends Blog_Page_Abstract{
 	        echo "<script>history.go({$goHistory})</script>";die;
 	    }
 	    
-	    echo $msg;die;
+	    echo trim($msg);die;
     }
     /**
      * 执行登录

@@ -172,7 +172,8 @@ $("#user-register").live('click', function(e){
 		datatype:'text',
 		async:true,
 		success:function(apiDate){
-			if(apiDate == 'ok'){
+			
+			if(apiDate.indexOf('ok')>-1){
 				var loginEle = '<a id="login_sign">'+username+'</a>&nbsp;&nbsp;<a href=":;" id="login_out">退出</a>';
 				document.getElementById('login-button').innerHTML = loginEle;
 				hideAll();
