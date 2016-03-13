@@ -1,7 +1,7 @@
 //评论
 $(".ds-post-button").live('click', function(e){
 	var username = decodeURI(readCookie('blog_username'));
-	if(!username){ showAll('#model', 'showlogin'); return false;}
+	if(!username){ showAll('#model', 'showregister'); return false;}
 	
 	var message = $("#message").val();
 	var articleId = $("#comment").attr("articleId");

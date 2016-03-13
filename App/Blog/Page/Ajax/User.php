@@ -139,7 +139,7 @@ class Blog_Page_Ajax_User extends Blog_Page_Abstract{
         $password = $input->post('password');
     
         if(!$userName) $msg = '请填写用户名';
-        if(!$password) $msg = '请填写密码';
+        //if(!$password) $msg = '请填写密码';
         
         if(preg_match('/@/', $userName)){
             $userInfo = Helper_Blogconfig::getUserInfo(array('email'=>$userName, 'password'=>md5($password.'_')));

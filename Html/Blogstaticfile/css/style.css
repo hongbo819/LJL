@@ -2048,8 +2048,13 @@ a.tag.hover {
 	padding:4px;
 	border:1px;
 	border-radius:0.5em;
-	width:50px;
 	font-size:15px;
+}
+#user-login{
+	width:50px;
+}
+#user-register{
+	width:100px;
 }
 .mask {  
 	position: absolute; top: 0px; filter: alpha(opacity=60); background-color: #777;
@@ -2058,8 +2063,9 @@ a.tag.hover {
 }
 .model{
 	position: absolute; z-index: 1003; 
-	padding: 21px;
-	width:326px; height:auto; text-align:center;
+	padding: 20px 50px 20px 50px;
+	text-align:center;
+	height:auto;
 	background-color:white; display: none;
 	border:solid 6px #40AA53;
 	border-top:solid 30px #40AA53;
