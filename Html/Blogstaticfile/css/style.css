@@ -2069,10 +2069,10 @@ a.tag.hover {
 	margin: 5px;
 }
 .model #click-close{
-	position:absolute; top:0; right:8px;
+	position:absolute; top:0; right:2px;
 }
 .model span{
-	position:absolute; top:0; left:8px;
+	position:absolute; top:0; left:4px;
 }
 .model div a{
 	padding:2px;
