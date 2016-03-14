@@ -32,16 +32,15 @@
             <?php if($pageType == 'Detail'){?>
                 <script type="text/javascript" src="<?=$_SFP?>js/jquery.qqFace.min.js"></script>
                 <script type="text/javascript" src="<?=$_SFP?>js/comment.js"></script>
-                <script src="<?=WWW_WEB?>index.php?c=ajax_Article&a=addview&articleid=<?=$articleInfo['id']?>"></script>
+                <script>$.get("<?=WWW_WEB?>index.php?c=ajax_Article&a=addview&articleid=<?=$articleInfo['id']?>")</script>
             <?php }elseif($pageType == 'List' && $tag){?>
-                <script src="<?=WWW_WEB?>index.php?c=ajax_Article&a=addtagview&tag=<?=$tag?>&cate=<?=$cate?>"></script>
+                <script>$.get("<?=WWW_WEB?>index.php?c=ajax_Article&a=addtagview&tag=<?=$tag?>&cate=<?=$cate?>")</script>
             <?php }?>
             <script>
             	//具体的参数以及意义可以参照百度分享官网share.baidu.com
             	window._bd_share_config={"common":{"bdText":document.title,"bdDesc":document.description,"bdUrl":window.location.href,"bdPic":"","bdSize":24},share:{}};
             	with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
-            </script>
-            <script>
+            	
         		$(function() {
         			$(window).scroll(function() {
         				if ($(window).scrollTop() > 1000)
