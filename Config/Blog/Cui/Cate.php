@@ -10,8 +10,8 @@ return array(
         'mysql'  => array('MySQL'),
         'js'     => array('JS'),
         'jiagou' => array('架构相关'),
-        'math'   => array('算法相关'),
-        'tech'   => array('科技圈'),
-        'grow'   => array('成长'),
+        //'math'   => array('算法相关'),
+        'grow'   => array('随笔.生活'),
+	    'tech'   => array('值得收藏'),
 	),
 );
