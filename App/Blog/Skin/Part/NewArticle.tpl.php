@@ -4,8 +4,8 @@
 		        'cate'        => $cate, //要查询的cate
 		        'order'       => 'order by id desc',
 		    ));
-    //最近5天最热的
-    $fiveDayHot = SYSTEM_TIME-5*24*3600;
+    //最近30天最热的
+    $fiveDayHot = SYSTEM_TIME-30*24*3600;
     $hotList = Helper_Blog::getArticleList(array(
 		        'fields'      => array('id', 'title'),//要查询的字段
 		        'cate'        => $cate, //要查询的cate
