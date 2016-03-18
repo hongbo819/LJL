@@ -27,9 +27,9 @@
     		        2 => array('linux','Linux文章'),
     		        3 => array('mysql','MySQL文章'),
 		            4 => array('js' ,'JS相关文章'),
-		            5 => array('math','算法相关'),
-		            6 => array('jiagou','架构相关'),
-		            7 => array('grow','成长相关')
+		            5 => array('jiagou','架构相关'),
+		            6 => array('grow','随笔.生活'),
+		            7 => array('tech','值得收藏'),
 		            );
 		    $db = Db_Blog::instance(null,'blog_cui');
 		    
@@ -62,16 +62,18 @@
 		        $akey = array_rand($articleList);
 		        $articleInfo = $articleList[$akey];
 		        
-		        $answer = $articleInfo['title'].":".PHP_EOL."http://cui.zhbor.com/article/".$articleInfo['id'].".html";
+		        $answer = "<a href='http://cui.zhbor.com/article/{$articleInfo['id']}.html'>{$articleInfo['title']}</a>";
+		        //$answer = $articleInfo['title'].":".PHP_EOL."http://cui.zhbor.com/article/".$articleInfo['id'].".html";
 		    }else{
 		        $answer = '回复数字来找文章'.PHP_EOL;
 		        $answer .= '1: PHP文章'.PHP_EOL;
 		        $answer .= '2: Linux文章'.PHP_EOL;
 		        $answer .= '3: MySQL文章'.PHP_EOL;
 		        $answer .= '4: JS相关文章'.PHP_EOL;
-		        $answer .= '5: 算法(暂无文章)'.PHP_EOL;
-		        $answer .= '6: 架构相关文章'.PHP_EOL;
-		        $answer .= '7: 成长相关'.PHP_EOL;
+		        $answer .= '5: 架构相关文章'.PHP_EOL;
+		        $answer .= '6: 随笔.生活'.PHP_EOL;
+		        $answer .= '7: 值得收藏'.PHP_EOL;
+		        
 		        
 		    }
 		    
@@ -79,7 +81,6 @@
 		          'content' => $answer,
 		    ));
 		    echo $answer;die;
-		    
 		}
 	}
 ?>
