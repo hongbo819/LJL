@@ -92,7 +92,7 @@
 		 */
 		private function _noArticle($classid, $page) {
 		    $articleCate = self::_getCate();
-		    $answer .= $articleCate[$classid][1].'总页数 小于'.$page.'直接输入 '.$classid.' 试试'.PHP_EOL;
+		    $answer .= $articleCate[$classid][1].'总页数小于'.$page.',直接输入数字 '.$classid.' 试试.\(^o^)/'.PHP_EOL;
 		    echo LJL_Api::run('Open.Weixin.answerText',array(
 		        'content' => $answer,
 		    ));die();
