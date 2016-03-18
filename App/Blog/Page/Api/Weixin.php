@@ -38,7 +38,7 @@
 		        self::_notice();
 		    
 		    $classid = substr($content, 0, 1);
-		    $page    = substr($content, 1, 0) ? substr($content, 1, 0) : 1;
+		    $page    = substr($content, 1) ? substr($content, 1) : 1;
 		    //限制分类
 		    if($classid > 7 || $classid < 1)
 		        $this->_notice();
