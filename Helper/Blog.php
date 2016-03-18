@@ -372,7 +372,7 @@
 		    $imgPath = LJL_Api::run("Image.DFS.getImgDir" , array(
 		        'imgName' => $imgName,
 		        'time'    => $time,
-		        'rootdir' => UPLOAD_IMG_PATH.'blog_'.APP_BLOG_NAME.'/',
+		        'rootdir' => $rootdir,
 		    ));
 		    $webPath = self::getImgWebPath($imgPath);
 		    return $webPath.'/'.$size.$imgName.'.'.$imgExt;
