@@ -4,6 +4,8 @@
      * @author cuihb
      * @since 2015-11-27
      */
+//http://www.tuling123.com/openapi/api?key=f422678a1cf9064fbd11bdeb4f481715&info=%E7%AC%91%E8%AF%9D
+
 	class Blog_Page_Api_Weixin extends Blog_Page_Abstract{
 		public function __construct(LJL_Request $input, LJL_Response $output)
 		{
@@ -34,14 +36,19 @@
 		    $content = (string)$resieveMsg['Content'];
 		    
 		    //错误关键字 回复提示信息
-		    if(!is_numeric($content))
-		        self::_notice();
+		    if(!is_numeric($content)) {
+		        if(rand(0, 3)) {
+		            self::_robotAnswer($content);
+		        }else {
+		            self::_notice();
+		        }
+		    }
 		    
 		    $classid = substr($content, 0, 1);
 		    $page    = substr($content, 1) ? substr($content, 1) : 1;
 		    //限制分类
 		    if($classid > 7 || $classid < 1)
-		        $this->_notice();
+		        $this->_notice('分类在 1-7 之间');
 		        
 		    $articleList = Helper_Blog::getArticleList(array(
 		            'fields'  =>array('id','firstImgId','title','descript'),
@@ -87,6 +94,15 @@
 		        'size' => ''
 		    ));
 		}
+		private function _robotAnswer($words) {
+		    $url = 'http://www.tuling123.com/openapi/api?key=f422678a1cf9064fbd11bdeb4f481715&info='.$words;
+		    $res = (array)json_decode(file_get_contents($url));
+		    if($res['code'] == 100000) {
+		        self::_notice($res['text']);
+		    } else {
+		        self::_notice();
+		    }
+		}
 		/**
 		 * 无文章提示
 		 */
@@ -100,7 +116,7 @@
 		/**
 		 * 输入错误关键字后给出提示信息
 		 */
-		private function _notice() {
+		private function _notice($msg='') {
 		    $answer  = '1: PHP文章 '.PHP_EOL;
 		    $answer .= '2: Linux文章'.PHP_EOL;
 		    $answer .= '3: MySQL文章'.PHP_EOL;
@@ -111,6 +127,7 @@
 		    $answer .= '----------------------------'.PHP_EOL;
 		    $answer .= '回复数字来找文章,例如:'.PHP_EOL;
 		    $answer .= '12代表第1类文章的第2页'.PHP_EOL;
+		    if($msg) $answer = $msg;
 		    echo LJL_Api::run('Open.Weixin.answerText',array(
 		        'content' => $answer,
 		    ));die();
