@@ -512,5 +512,20 @@
 		    $db = Db_Blog::instance();
 		    $res = $db->query($sql);
 		}
+		/**
+		 * 图灵机器人的回答信息
+		 */
+		public static function insertRobotAnswer($paramArr) {
+		    $options = array(
+		        'insertData' =>  array(), #array('name'=>'cuihb');
+		    );
+		    if (is_array($paramArr))$options = array_merge($options, $paramArr);
+		    extract($options);
+		    $formatData = self::setInsertCondition($insertData);
+		    $sql = "INSERT INTO blog_robot_answer({$formatData['fileds']}) VALUES({$formatData['values']})";
+		    $db = Db_Blog::instance();
+		    $db->query($sql);
+		    return $db->lastInsertId();
+		}
 	}
 ?>
