@@ -37,9 +37,9 @@
 		    
 		    //错误关键字 回复提示信息
 		    if(!is_numeric($content)) {
-		        if(rand(0, 3)) {
+		        if(mt_rand(0,2)) {
 		            self::_robotAnswer($content);
-		        }else {
+		        } else {
 		            self::_notice();
 		        }
 		    }
