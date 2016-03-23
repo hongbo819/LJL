@@ -98,8 +98,9 @@
 		    $url = 'http://www.tuling123.com/openapi/api?key=f422678a1cf9064fbd11bdeb4f481715&info='.$words;
 		    $res = (array)json_decode(file_get_contents($url));
 		    if($res['code'] == 100000) {
+		        $content = $words.'---'.$res['text'];
 		        Helper_Blog::insertRobotAnswer(array(
-		            'insertData' =>  array('content'=>$words.'---'.$res['text']),
+		            'insertData' =>  array('content'=>$content),
 		        ));
 		        self::_notice($res['text']);
 		    } else {
