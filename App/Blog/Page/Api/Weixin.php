@@ -125,7 +125,7 @@
 		    $answer .= '6: 随笔.生活'.PHP_EOL;
 		    $answer .= '7: 值得收藏'.PHP_EOL;
 		    $answer .= '----------------------------'.PHP_EOL;
-		    $answer .= '学习会吧'.PHP_EOL;
+		    $answer .= '学习会儿吧'.PHP_EOL;
 		    $answer .= '回复数字找文章,例如:'.PHP_EOL;
 		    $answer .= '12代表第1类文章的第2页'.PHP_EOL;
 		    if($msg) $answer = $msg;
