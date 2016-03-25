@@ -10,7 +10,7 @@
         <div class="content">
             <div class="content_resize">
                 <div class="mainbar">
-                        <h1>录入网站信息</h1><h3>标 <m>*</m> 为必填内容</h3>
+                        <h1>录入网站信息</h1><h3>标 <m>*</m> 为必填内容，查看 <a href="http://cui.zhbor.com/article/3.html">博客介绍以及说明</a></h3>
                         <form action="" method="post">
                             <ol>
                                 <li>

@@ -8,7 +8,7 @@
                         Copyright © <a target="_blank" href="<?="http://www.".Blog_Plugin_Common::getHost()?>"><?=Blog_Plugin_Common::getHost()?></a> 京ICP备15048235号
                     </p>
                     <p>
-                        如果你也想拥有自己专业的独立博客站，请联系：hongbo819@163.com
+                        想拥有自己专业的独立博客站，请点击<a target="_blank" href="<?="http://www.".Blog_Plugin_Common::getHost()."/index.php?c=apply"?>"> 开通博客 </a>或者联系：hongbo819@163.com
                     </p>
                 </div>
             </div>
