@@ -26,7 +26,7 @@
                                     <label><m>*</m>网站分类（建议4-10个分类，用英文逗号,分割）:</label> <input type="text" name="cate" class="input_middle">
                                 </li>
                                 <li>
-                                    <label><m>*</m>管理员邮箱:</label> <input type="password" name="email" class="input_middle">
+                                    <label><m>*</m>管理员邮箱:</label> <input type="text" name="email" class="input_middle">
                                 </li>
                                 <li>
                                     <label><m>*</m>管理员账号:</label> <input type="text" name="adminName" class="input_middle">
