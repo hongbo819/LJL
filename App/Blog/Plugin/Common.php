@@ -22,9 +22,9 @@ class Blog_Plugin_Common {
     /**
      * 验证登录的合法性
      */
-    public static function loginAuth() {
-        if($_COOKIE['blog_username'])
-            return $_COOKIE['blog_ckid'] === self::ckid($_COOKIE['blog_username']) ? true : false;
+    public static function loginAuth($ckid, $name) {
+        if($name)
+            return $ckid === self::ckid($name) ? true : false;
         return true;
     }
     /**
