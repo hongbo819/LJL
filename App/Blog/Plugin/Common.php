@@ -20,6 +20,14 @@ class Blog_Plugin_Common {
         return md5(md5($str).$key);
     }
     /**
+     * 验证登录的合法性
+     */
+    public static function loginAuth() {
+        if($_COOKIE['blog_username'])
+            return $_COOKIE['blog_ckid'] === self::ckid($_COOKIE['blog_username']) ? true : false;
+        return true;
+    }
+    /**
      * 获取顶级域名
      */
     public static function getHost(){

@@ -46,6 +46,10 @@ abstract class Blog_Page_Abstract extends LJL_Abstract_Page
 	            setcookie('emithsulf', API_Item_Security_Algos::fastEncode(array('value'=>$nowNum)), SYSTEM_TIME+3, '/');
 	        }
 	    }
+	    //登录验证
+	    if(!Blog_Plugin_Common::loginAuth()) {
+	        echo '非法。。。登录。。。';die();
+	    }
 		
 		return true;
 	}
