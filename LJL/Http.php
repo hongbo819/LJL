@@ -260,6 +260,8 @@ class LJL_Http {
     public static function isRobot($useragent=''){
         $spiders = array('bot', 'crawl', 'spider', 'slurp', 'sohu-search', 'lycos', 'robozilla');
         $browsers= array('msie', 'netscape', 'opera', 'konqueror', 'mozilla');
+        if(!isset($_SERVER['HTTP_USER_AGENT']))
+            return true;
         $useragent = strtolower(empty($useragent) ? $_SERVER['HTTP_USER_AGENT'] : $useragent);
         
         if(strpos($useragent, 'http://')===false && API_Item_Base_Array::isArrvalInStr($useragent, $browsers))
@@ -269,7 +271,7 @@ class LJL_Http {
         return false;
     }
     /**
-     * 判断是否是爬虫
+     *第一种 判断是否是搜索引擎的代码 判断是否是爬虫
      */
     public static function isCrawler() {
         $agent = strtolower($_SERVER['HTTP_USER_AGENT']);
