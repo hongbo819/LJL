@@ -36,7 +36,7 @@
                 </li>
                 <?php }}?>
             </ul>
-            <div style="cursor:pointer;margin-left:70px;margin-top:5px;"><img id="face1" src="<?=$_SFP?>images/face.gif"></div>
+            <div style="cursor:pointer;margin-top:5px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img id="face1" src="<?=$_SFP?>images/face.gif"></div>
             <div class="ds-replybox">
                 <a class="ds-avatar"><img src="<?=$_SFP?>images/noavatar_default.png"></a>
                 <form>

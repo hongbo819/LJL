@@ -15,6 +15,7 @@
 	position:relative;
 	-webkit-border-radius:3px;
 	border-radius:3px;
+	width:60px;
 	background-color:#fff;
 	float:left;
 }
