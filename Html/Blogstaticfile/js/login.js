@@ -7,10 +7,10 @@ function showMask(){
 //让指定的DIV始终显示在屏幕正中间
 function letDivCenter(divName){ 
 	var top = ($(window).height() - $(divName).height())/3; 
-	var left = ($(window).width() - $(divName).width())/2; 
+	var left = ($(window).width() - $(divName).width()-113)/2; 
 	var scrollTop = $(document).scrollTop(); 
 	var scrollLeft = $(document).scrollLeft(); 
-	$(divName).css( { position : 'absolute', 'top' : top + scrollTop, left : left/2 + scrollLeft/2 } ).show();
+	$(divName).css( { position : 'absolute', 'top' : top + scrollTop, left : left + scrollLeft } ).show();
 }
 function letDivHide(){ 
 	$("#model").fadeOut();
