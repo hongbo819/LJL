@@ -7,5 +7,41 @@
         <?php if($pageType==='Detail'){?>
             <link type="text/css" rel="stylesheet" href="<?=$_SFP?>css/embed.default.css">
         <?php }?>
+        <meta http-equiv="Cache-Control" content="no-transform" /> 
+        <meta http-equiv="Cache-Control" content="no-siteapp" />
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=yes" />
+        <style  >
+            #wapfl{display:none;}
+            @media(max-width:960px)
+            {
+                	.hidden2{display:none;}
+                #wapfl{display:block;}
+                	body{width:100%}
+                	#wp{width:100%}
+                	#wp img{max-width:90%}
+                	#wp div{width:100%}
+                	#wp table{max-width:95%}
+                	#article_info {padding-bottom:27px;}
+                	.search_goal p {width:80%}
+                #wapfl ul{
+                   float:left;
+                }
+                .model input{border:solid 1px}
+                #wapfl li a {
+	                float:left;
+                    	background-color: #E0EAF1;
+                    color: #3E6D8E;
+                    font-size: 15px;
+                    margin: 5px 15px 2px 0;
+                    padding: 5px;
+                    text-decoration: none;
+                    white-space: nowrap;
+                	    border-radius: 8px;
+                    }
+                #wapfl li{
+	              
+                }
+            }
+        </style>
     </head>
     <body>

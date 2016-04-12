@@ -13,7 +13,7 @@
             ?>
         </div>
     </div>
-    <div class=" a1R">
+    <div class="hidden2 a1R">
         <div class="bdsharebuttonbox" data-tag="share_1">
         	<a class="bds_tsina" data-cmd="tsina"></a>
         	<a class="bds_weixin" data-cmd="weixin"></a>

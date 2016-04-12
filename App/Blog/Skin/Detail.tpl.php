@@ -51,7 +51,7 @@
                                         </div>
                                     </td></tr>
                                     <tr>
-                                        <td height="30" width="360">
+                                        <td height="30">
                                             上一篇：<?php if($prevNext[0]){?><a href="<?=$prevNext[0][0]['url']?>"><?=$prevNext[0][0]['title']?></a><?php }else{echo '暂无';}?>
                                         </td>
                                         <td height="30">

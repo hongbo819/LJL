@@ -8,7 +8,7 @@
 ?>
 
 <?php if(defined('WEIBO_UID')){?>
-    <div class="yard cm_mb" style="margin-top:10px;">
+    <div class="hidden yard cm_mb" style="margin-top:10px;">
         <div class="ydtitle"><h3><span style="color: #40AA53">About me</span></h3></div>
         <div class="ydcontent index_gtag">
             <iframe width="100%" height="22" frameborder="0" allowtransparency="true" marginwidth="0" marginheight="0" scrolling="no" border="0" src="http://widget.weibo.com/relationship/followbutton.php?language=zh_cn&uid=<?=WEIBO_UID?>&style=3&btn=red&dpc=0"></iframe>
