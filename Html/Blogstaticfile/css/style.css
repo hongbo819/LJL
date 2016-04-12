@@ -1416,7 +1416,7 @@ body {
 .plist, .p_l, .p_r, .hotB, .p_l .userinfo, .p_r h2, .p_r p, .priceB {
 
 	overflow: hidden;
-
+	margin-right:13px;
 	color:#666666
 
 }
