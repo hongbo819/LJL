@@ -10,7 +10,7 @@ function letDivCenter(divName){
 	var left = ($(window).width() - $(divName).width())/2; 
 	var scrollTop = $(document).scrollTop(); 
 	var scrollLeft = $(document).scrollLeft(); 
-	$(divName).css( { position : 'absolute', 'top' : top + scrollTop, left : left + scrollLeft } ).show();
+	$(divName).css( { position : 'absolute', 'top' : top + scrollTop, left : left/2 + scrollLeft/2 } ).show();
 }
 function letDivHide(){ 
 	$("#model").fadeOut();
