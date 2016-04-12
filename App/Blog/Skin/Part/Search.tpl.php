@@ -1,4 +1,4 @@
-<div class="searchBlk">
+<div class="hidden2 searchBlk">
     <form target="_blank" action="<?=Blog_Plugin_Urls::getIndexUrl(array());?>" autocomplete="off" method="get" id="scbar_form">
         <input type="hidden" name="c" value="list"></input>
         <input type="hidden" name="a" value="search"></input>
