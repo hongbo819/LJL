@@ -448,7 +448,7 @@
 		    if (is_array($paramArr))$options = array_merge($options, $paramArr);
 		    extract($options);
 		    
-		    $sql = "SELECT articleId FROM `blog_comment` GROUP BY articleId {$order} limit {$limit} ";
+		    $sql = "SELECT articleId FROM `blog_comment` where isDel=0 GROUP BY articleId {$order} limit {$limit} ";
 		    $db = Db_Blog::instance();
 		    return $db->getCol($sql);
 		}
