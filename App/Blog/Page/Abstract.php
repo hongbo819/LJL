@@ -47,10 +47,11 @@ abstract class Blog_Page_Abstract extends LJL_Abstract_Page
 	        }
 	    }
 	    //登录验证
-	    if(!Blog_Plugin_Common::loginAuth($input->cookie('blog_ckid'), $input->cookie('blog_username'))) {
-	        echo '非法。。。登录。。。';die();
+	    if($input->cookie('blog_ckid') && $input->cookie('blog_username')) {
+	        if(false === Blog_Plugin_Common::loginAuth($input->cookie('blog_ckid'), $input->cookie('blog_username'))) {
+	            echo '非法。。。登录。。。';die();
+	        }
 	    }
-		
 		return true;
 	}
 	/**
