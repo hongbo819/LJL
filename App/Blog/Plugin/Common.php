@@ -17,7 +17,7 @@ class Blog_Plugin_Common {
      */
     public static function ckid($str){
         $key = '&$@#$%&^$';
-        return md5(md5($str).$key);
+        return md5(md5(urlencode($str)).$key);
     }
     /**
      * 验证登录的合法性
