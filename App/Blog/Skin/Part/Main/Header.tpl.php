@@ -33,7 +33,7 @@
                    float:left;
                 }
                 .tab_box ul li{width:71%}
-                .tab_box ul li p{margin:10px;}
+                .tab_box ul li p.list_title{text-align:left}
                 .model input{border:solid 1px}
                 #wapfl li a {
 	                float:left;
