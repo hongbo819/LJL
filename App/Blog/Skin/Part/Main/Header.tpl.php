@@ -15,11 +15,12 @@
             @media(max-width:960px)
             {
 	            body{width:100%}
-                	.wp{width:95%;margin:0 auto;}
+                	.wp,#wp{width:95%;margin:0 auto;}
                 	.hidden2{display:none;}
                 #wapfl{display:block;margin:0 auto;width:95%;}
             	    #wapfl .active{background-color:red;}
             	    #ds-thread #ds-reset .ds-textarea-wrapper{padding-right:0px;}
+	            #ds-thread #ds-reset .ds-comment-body p{width:78%}
                 	#ft{width:95%;margin:0 auto;}
                 	.ydtitle{padding: 0 0;}
                 	.searchBlk{padding-top:10px;padding:1px;}
@@ -31,6 +32,8 @@
                 #wapfl ul{
                    float:left;
                 }
+                .tab_box ul li{width:71%}
+                .tab_box ul li p{margin:10px;}
                 .model input{border:solid 1px}
                 #wapfl li a {
 	                float:left;

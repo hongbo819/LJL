@@ -1082,8 +1082,6 @@ body {
 
 	border-bottom: 1px dotted #DDDDDD;
 
-	height: 140px;
-
 	left: 0;
 
 	overflow: hidden;
@@ -1138,10 +1136,8 @@ body {
 
 	color: #666666;
 
-	height: 80px;
-
 	line-height: 25px;
-
+	margin:10px;
 	clear:both;
 
 }
