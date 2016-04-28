@@ -25,6 +25,7 @@
                 	.ydtitle{padding: 0 0;}
                 	.searchBlk{padding-top:10px;padding:1px;}
                 	#wp div{width:100%}
+	            #wp img{max-width:100%}
                 	#wp table{max-width:95%}
                 	#article_info {padding-bottom:27px;}
                 	.search_goal p {width:80%}
