@@ -64,7 +64,7 @@
 		    $data = $input->post('imgArr');
 		    if(!$data) exit('error');
 		    $data = explode("\n", $data);
-		    $putDir = PRODUCTION_ROOT . '/Html/Blog_'.APP_BLOG_NAME.'/dimg.php';
+		    $putDir = '/tmp/'.APP_BLOG_NAME.'.php';
 		    if(file_put_contents($putDir, json_encode($data))){
 		        exit('ok');
 		    } else {

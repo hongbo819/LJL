@@ -54,7 +54,7 @@ class Blog_Page_Default extends Blog_Page_Abstract
         
         //首页展示图片
         $showImgs = '';
-        $imgStrFile = PRODUCTION_ROOT . '/Html/Blog_'.APP_BLOG_NAME.'/dimg.php';
+        $imgStrFile = '/tmp/'.APP_BLOG_NAME.'.php';
         if(file_exists($imgStrFile)) {
             $imgStr = file_get_contents($imgStrFile);
             $imgArr = json_decode($imgStr);

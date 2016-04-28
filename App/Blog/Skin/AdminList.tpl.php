@@ -47,8 +47,8 @@ $('#sub-img').click(function(){
     $.post('index.php?c=admin&a=imgshow', {
     	imgArr: textVal,
 	}, function(r) {
-		if(r==='error'){
-			alert('提交失败');return false;
+		if(r==='ok'){
+			alert('提交成功');return false;
 		}
 		alert('提交成功');
 	})
