@@ -37,22 +37,44 @@
                 <script>$.get("<?=WWW_WEB?>index.php?c=ajax_Article&a=addtagview&tag=<?=$tag?>&cate=<?=$cate?>")</script>
             <?php }?>
             <script>
-            	//具体的参数以及意义可以参照百度分享官网share.baidu.com
-            	window._bd_share_config={"common":{"bdText":document.title,"bdDesc":document.description,"bdUrl":window.location.href,"bdPic":"","bdSize":24},share:{}};
-            	with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
-            	
-        		$(function() {
-        			$(window).scroll(function() {
-        				if ($(window).scrollTop() > 1000)
-        					$('div.go-top').show();
-        				else
-        					$('div.go-top').hide();
-        			});
-        			$('div.go-top').click(function() {
-        				$('html, body').animate({scrollTop: 0}, 500);
-        			});
-        		});
-        	</script>
+                	//具体的参数以及意义可以参照百度分享官网share.baidu.com
+                	window._bd_share_config={"common":{"bdText":document.title,"bdDesc":document.description,"bdUrl":window.location.href,"bdPic":"","bdSize":24},share:{}};
+                	with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+                	//向上滚动
+            		$(function() {
+            			$(window).scroll(function() {
+            				if ($(window).scrollTop() > 1000)
+            					$('div.go-top').show();
+            				else
+            					$('div.go-top').hide();
+            			});
+            			$('div.go-top').click(function() {
+            				$('html, body').animate({scrollTop: 0}, 500);
+            			});
+            		});
+            	</script>
+        <?php }?>
+        <?php if($pageType == "Default" && $showImgs) {?>
+            <script>
+            var imgScroll = function() {
+                   var imgs = $("#img-scroll img");
+                   var imgNum = imgs.length, preActive=0;
+                   if(imgNum == 1){
+               	        imgs.eq(0).addClass('active');
+               	        return;
+                   } 
+                   if(imgNum < 2) return;
+                   for(var i=0; i<imgNum; i++) {
+                       if(imgs.eq(i).hasClass('active')) {
+                   	      var preActive = i;
+                      	   imgs.eq(i).fadeOut().removeClass('active');
+                       }
+                   }
+                   var nowActive = preActive == imgNum-1 ? 0 : preActive+1;
+                   imgs.eq(nowActive).addClass('active').fadeIn();
+                }
+            setInterval("imgScroll()",3000);
+            </script>
         <?php }?>
 	<div style="display:none"><script src="http://s4.cnzz.com/z_stat.php?id=1256391835&web_id=1256391835" language="JavaScript"></script></div>
     </body>

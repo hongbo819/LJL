@@ -58,6 +58,20 @@
 			$output->setTemplate('Admin');
 		}
 		/**
+		 * 设置首图地址与文章链接
+		 */
+		public function doImgshow(LJL_Request $input, LJL_Response $output) {
+		    $data = $input->post('imgArr');
+		    if(!$data) exit('error');
+		    $data = explode("\n", $data);
+		    $putDir = PRODUCTION_ROOT . '/Html/Blog_'.APP_BLOG_NAME.'/dimg.php';
+		    if(file_put_contents($putDir, json_encode($data))){
+		        exit('ok');
+		    } else {
+		        exit('error');
+		    }
+		}
+		/**
 		 * 发布文章
 		 * @param LJL_Request $input
 		 * @param LJL_Response $output

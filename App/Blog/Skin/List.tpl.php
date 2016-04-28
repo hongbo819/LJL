@@ -4,6 +4,7 @@
             <?=$navGuideTpl?>
             <div class="wp area2 cl cm_mb">
                 <div class="a1L">
+                    <?=$showImgs?>
                     <div class="detail">
                         <div class="pclass cl" id="catbox">
                             <a href="<?=Blog_Plugin_Urls::getListUrl(array('cate'=>$cate))?>" title="<?php if(!empty($cate)) echo $cateList[$cate][0];?>" <?php if(!$tag){?>class="y"<?php }?>>全部</a>

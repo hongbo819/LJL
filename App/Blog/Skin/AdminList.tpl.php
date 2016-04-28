@@ -1,6 +1,7 @@
 <head>
 <meta name="ROBOTS" content="NOINDEX, NOFOLLOW" />
 <link href="<?=$_SFP?>css/adminlist.css" type="text/css" rel="stylesheet">
+<script type="text/javascript" charset="utf-8" src="<?=$_SFP?>js/jquery-1.7.1.min.js"></script>
 </head>
 <body>
 <dl class="list_dl">
@@ -33,5 +34,25 @@
         </ul>
     </dd>
 </dl>
+首页导图设置，一个url对应一个imgsrc，中间用#分割。<br/>
+例如  ：<br/>
+http://zhbor.com/1.html#http://img.cuihongbo.com/1.jpg<br/>
+http://zhbor.com/2.html#http://img.cuihongbo.com/2.jpg<br/>
+<textarea style="width:100%;height:200px;"></textarea>
+<div style="float:right;" id="sub-img"><a href="javascript:;">提交导图</a></div>
+<script>
+//删除图片
+$('#sub-img').click(function(){
+    var textVal = $("textarea").val();
+    $.post('index.php?c=admin&a=imgshow', {
+    	imgArr: textVal,
+	}, function(r) {
+		if(r==='error'){
+			alert('提交失败');return false;
+		}
+		alert('提交成功');
+	})
+}) 
+</script>
 </body>
 </html>
