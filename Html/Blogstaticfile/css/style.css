@@ -181,11 +181,12 @@ body {
 	float:left;
 
 }
-
+.a1L img{width:720px;}
+#img-scroll img{display:none;}
+#img-scroll .active{display:block;}
 .a1R {
 
 	width:260px;
-
 	float:right;
 
 }

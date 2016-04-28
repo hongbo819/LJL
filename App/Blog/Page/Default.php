@@ -51,6 +51,20 @@ class Blog_Page_Default extends Blog_Page_Abstract
         //面包屑导航
         $nav[0]['title'] = '首页';
         $pageTitle = $page>1 ? '-第'.$page.'页' : '';
+        
+        //首页展示图片
+        $showImgs = '';
+        $imgStrFile = PRODUCTION_ROOT . '/Html/Blog_'.APP_BLOG_NAME.'/dimg.php';
+        if(file_exists($imgStrFile)) {
+            $imgStr = file_get_contents($imgStrFile);
+            $imgArr = json_decode($imgStr);
+            $showImgs = '<div id="img-scroll">';
+            foreach ((array)$imgArr as $urlsrc) {
+                $us = explode('#', $urlsrc);
+                $showImgs .= '<a target="_blank" href="'.$us[0].'"><img src="'.$us[1].'"></a>';
+            }
+            $showImgs .= '</div>';
+        }
         //seo
         $output->seoArr = array('title' => BLOG_SEO_TITTLE.$pageTitle.'　| 最红博 ');
         
@@ -60,6 +74,7 @@ class Blog_Page_Default extends Blog_Page_Abstract
         $output->cateList      = $cateList;
         $output->pageStr       = $pageStr;
         $output->articleList   = $articleList;
+        $output->showImgs      = $showImgs;
         
         $output->header        = $output->fetchCol("Part/Main/Header");
         $output->footer        = $output->fetchCol("Part/Main/Footer");
