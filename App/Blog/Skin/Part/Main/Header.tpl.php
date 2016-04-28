@@ -24,7 +24,6 @@
                 	#ft{width:95%;margin:0 auto;}
                 	.ydtitle{padding: 0 0;}
                 	.searchBlk{padding-top:10px;padding:1px;}
-                	#wp img{max-width:90%}
                 	#wp div{width:100%}
                 	#wp table{max-width:95%}
                 	#article_info {padding-bottom:27px;}
