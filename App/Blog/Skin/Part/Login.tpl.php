@@ -10,7 +10,7 @@
 	       <form id="user-login-form" action='' method='post'>
         		用户名：<input type='text' name='username' autofocus required placeholder="用户名/邮箱"><br/>
         		密&nbsp;&nbsp;&nbsp;&nbsp;码：<input type='password' name='password' required><br/>
-        		<input id="user-login" type='submit' name='submit-btn' value="登录"> &nbsp;&nbsp;<a href="javascript:;" onclick="showAll('#model', 'showregister')">快速注册</a> &nbsp;&nbsp;<a href="<?=$loginurl?>">微博登录</a>
+        		<input id="user-login" type='submit' name='submit-btn' value="登录"> &nbsp;&nbsp;<a href="javascript:;" onclick="showAll('#model', 'showregister')">快速注册</a> &nbsp;&nbsp;<a href="<?=$loginurl?>" style="border-bottom: #666666 dashed 1px;font-weight: 600;font-size: 20px;">微博登录</a>
         	</form>
 	       <?php 
 	   }elseif($pageType == 'register'){?>
@@ -19,7 +19,7 @@
         		邮&nbsp;&nbsp;&nbsp;&nbsp;箱：<input type='email' name='email' required placeholder='必填项'><br/>
         		密&nbsp;&nbsp;&nbsp;&nbsp;码：<input type='password' name='password1' placeholder='密码可为空'><br/>
         		密&nbsp;&nbsp;&nbsp;&nbsp;码：<input type='password' name='password2' placeholder='密码可为空'><br/>
-        		<input id="user-register" type='submit' name='submit-btn' value="快速注册"> &nbsp;&nbsp;<a href="javascript:;" onclick="showAll('#model', 'showlogin')">登陆</a> &nbsp;&nbsp;<a href="<?=$loginurl?>">微博登录</a>
+        		<input id="user-register" type='submit' name='submit-btn' value="快速注册"> &nbsp;&nbsp;<a href="javascript:;" onclick="showAll('#model', 'showlogin')">登陆</a> &nbsp;&nbsp;<a href="<?=$loginurl?>" style="border-bottom: #666666 dashed 1px;font-weight: 600;font-size: 20px;">微博登录</a>
         	</form>
 	       <?php }?>
 </div>

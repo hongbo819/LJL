@@ -54,7 +54,7 @@ class Blog_Page_Api_Blog extends Blog_Page_Abstract
         //与搜索标签方法融合
         $tag  = $input->get('tag') ? urldecode(trim($input->get('tag'))) :  urldecode(trim($input->get('keyword')));
         if($cate === 'meinv') {
-            $arr = array('清纯美女','美女','性感美女', '模特', '美女写真', '长腿美女', '大胸美女', '人体模特');
+            $arr = array('清纯美女','美女','性感美女', '模特', '美女写真', '长腿美女', '大胸美女', '校花');
             shuffle($arr);
             $url = 'http://image.baidu.com/search/index?tn=baiduimage&word='.array_pop($arr);
             //$url = 'https://www.baidu.com';
