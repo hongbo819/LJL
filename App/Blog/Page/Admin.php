@@ -158,6 +158,16 @@
 		        'args'      => array('page'=>$page),//传参
 		    ));
 		    
+            //默认showimg
+		    $putDir = '/tmp/'.APP_BLOG_NAME.'.php';
+		    $outimg = '';
+		    if(file_exists($putDir)) {
+		        $imgArr = json_decode(file_get_contents($putDir));
+		        foreach((array)$imgArr as $img) {
+		            $outimg .= "\n".$img;
+		        }
+		    }
+		    $output->imgStr = $outimg;
 		    $output->articleid = $articleId;
 		    $output->pageStr = $pageStr;
 		    $output->articleList = $articleList;

@@ -38,7 +38,7 @@
 例如  ：<br/>
 http://zhbor.com/1.html#http://img.cuihongbo.com/1.jpg<br/>
 http://zhbor.com/2.html#http://img.cuihongbo.com/2.jpg<br/>
-<textarea style="width:100%;height:200px;"></textarea>
+<textarea style="width:100%;height:200px;"><?=$imgStr?></textarea>
 <div style="float:right;" id="sub-img"><a href="javascript:;">提交导图</a></div>
 <script>
 //删除图片
