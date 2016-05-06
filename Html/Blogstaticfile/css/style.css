@@ -181,7 +181,7 @@ body {
 	float:left;
 
 }
-.a1L #img-scroll img{width:720px;}
+.a1L #img-scroll img{width:720px;height:360px;}
 #img-scroll img{display:none;}
 #img-scroll .active{display:block;}
 .a1R {
