@@ -55,7 +55,7 @@ class Blog_Page_Default extends Blog_Page_Abstract
         //首页展示图片
         $showImgs = '';
         $imgStrFile = '/tmp/'.APP_BLOG_NAME.'.php';
-        if(file_exists($imgStrFile)) {
+        if(file_exists($imgStrFile) && $page < 2) {
             $imgStr = file_get_contents($imgStrFile);
             $imgArr = json_decode($imgStr);
             $showImgs = '<div id="img-scroll">';
