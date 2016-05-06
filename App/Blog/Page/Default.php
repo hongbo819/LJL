@@ -59,9 +59,10 @@ class Blog_Page_Default extends Blog_Page_Abstract
             $imgStr = file_get_contents($imgStrFile);
             $imgArr = json_decode($imgStr);
             $showImgs = '<div id="img-scroll">';
-            foreach ((array)$imgArr as $urlsrc) {
+            foreach ((array)$imgArr as $key=>$urlsrc) {
+                $active = $key === 0 ? 'class="active"' : '';
                 $us = explode('#', $urlsrc);
-                $showImgs .= '<a target="_blank" href="'.$us[0].'"><img src="'.$us[1].'"></a>';
+                $showImgs .= '<a target="_blank" href="'.$us[0].'"><img '.$active.' src="'.$us[1].'"></a>';
             }
             $showImgs .= '</div>';
         }
