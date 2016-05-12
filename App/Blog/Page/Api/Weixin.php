@@ -34,6 +34,11 @@
 		        'subscribeCallback' => 'subscribe'
 		    ));
 		    $content = (string)$resieveMsg['Content'];
+
+// 		    echo LJL_Api::run('Open.Weixin.answerText',array(
+// 		        'content' => $content,
+// 		    ));die();
+		    
 		    
 		    //错误关键字 回复提示信息
 		    if(!is_numeric($content)) {
@@ -100,7 +105,11 @@
 		    if($res['code'] == 100000) {
 		        $content = $words.'---'.$res['text'];
 		        Helper_Blog::insertRobotAnswer(array(
-		            'insertData' =>  array('content'=>$content),
+		            'insertData' =>  array(
+		                'content'=>$content,
+		                'tm'     => date('Y-m-d H:i:s')
+		                
+		            ),
 		        ));
 		        self::_notice($res['text']);
 		    } else {

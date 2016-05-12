@@ -67,7 +67,7 @@
                    for(var i=0; i<imgNum; i++) {
                        if(imgs.eq(i).hasClass('active')) {
                    	      var preActive = i;
-                      	   imgs.eq(i).fadeOut().removeClass('active');
+                      	   imgs.eq(i).slideUp().removeClass('active');
                        }
                    }
                    var nowActive = preActive == imgNum-1 ? 0 : preActive+1;
