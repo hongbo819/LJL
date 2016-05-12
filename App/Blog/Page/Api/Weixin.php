@@ -14,7 +14,7 @@
 		public function validate(LJL_Request $input, LJL_Response $output)
 		{
 			if (!parent::baseValidate($input, $output)) {
-                return false;
+                return   false;
             }
             return true;
 		}
