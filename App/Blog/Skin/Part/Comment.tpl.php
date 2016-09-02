@@ -20,12 +20,13 @@
                             <?php 
                             $apiuerInfo = Helper_User::getApiUserInfo(array('apiname'=>$val['user']));
                             $headImg = $apiuerInfo ? $apiuerInfo['api_headimg'] : $_SFP.'images/noavatar_default.png';
+                            $sinaUrl = $apiuerInfo['api_profileurl'] ? 'http://weibo.com/'.$apiuerInfo['api_profileurl'] : 'javascript:;';
                             ?>
-                            <img src="<?=$headImg?>" alt="<?=$val['user']?>">
+                            <a target="_blank" href="<?=$sinaUrl?>"><img src="<?=$headImg?>" alt="<?=$val['user']?>"></a>
                         </div>
                         <div class="ds-comment-body">
                             <div class="ds-comment-header">
-                                <span class="ds-user-name"><?=$val['user']?></span>
+                                <span class="ds-user-name"><a target="_blank" href="<?=$sinaUrl?>"><?=$val['user']?></a></span>
                             </div>
                             <p><?=$val['comment']?></p>
                             <div class="ds-comment-footer ds-comment-actions" user="<?=$val['user']?>" commentId="<?=$val['id']?>">

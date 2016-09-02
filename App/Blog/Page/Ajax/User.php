@@ -28,11 +28,13 @@ class Blog_Page_Ajax_User extends Blog_Page_Abstract{
             'apiuid'      =>$tokenInfo['uid'],
             'accessToken' =>$tokenInfo['access_token'],
         ));
+//         var_dump($tokenInfo,$userInfo);die;
         
         $userMapInfo = array(
             'api_uid'     => $tokenInfo['uid'],
             'api_name'    => $userInfo['screen_name'],
             'api_headimg' => $userInfo['profile_image_url'],
+            'api_profileurl' => $userInfo['profile_url'],
             'api_token'   => $tokenInfo['access_token'],
             'api_type'    => 'sina',
             'expires_tm'  => $tokenInfo['expires_in'],
