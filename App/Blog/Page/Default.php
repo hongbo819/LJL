@@ -6,7 +6,7 @@
  */
 class Blog_Page_Default extends Blog_Page_Abstract
 {
-    private $pageSize = 15;
+    private $pageSize = 20;
     public function __construct(LJL_Request $input, LJL_Response $output)
 	{
 	    parent::__construct($input, $output);
