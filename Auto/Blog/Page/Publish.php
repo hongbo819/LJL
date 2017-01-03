@@ -12,7 +12,7 @@ class Auto_Blog_Page_Publish extends Auto_Blog_Page_Abstract {
     private $cate = ''; //指定发布的类别prolan,dbms,linux,jscss,fm,cloud,math,news
     private $tags = '';    //指定分类 cate 下标签
     
-    private $pnum = 10; //每天每个分类下发布的文章数量10*7
+    private $pnum = 2; //每天每个分类下发布的文章数量10*7
    
     /**
      * 发布
