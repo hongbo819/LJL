@@ -246,6 +246,14 @@
 // 		                'borderWidth'   => 1,  #左右边框宽度,默认2px
 // 		                'borderHeight'  => 1,  #上下边框高度，默认2px
 // 		            ));
+		            API_Item_Image_IM::zoom(array(
+					           'srcPath'       => $path.$newname, #源文件路径
+					           'desPath'       => $path.$newname, #目标文件路径
+					           'size'          => '800x800', #要缩放的图片尺寸 如120x90
+					           'progressive'   => 0,  #是否进行渐进式渲染
+					           'quality'       => 90,  #图片品质
+					           'stripExif'     => true, #是否去掉Exif信息 拍摄相机信息等，除非显示拍摄相机的需求，否则无用
+								));
 		            API_Item_Image_IM::addText(array(
 		                'srcPath'       => $path.$newname, #源文件路径
 		                'desPath'       => $path.$newname, #目标文件路径
