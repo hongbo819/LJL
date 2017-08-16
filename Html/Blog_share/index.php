@@ -15,7 +15,7 @@ define('BLOG_SEO_TITTLE', BLOG_WEB_NAME.'-找到你想要的技术好文'); // �
 
 //上传图片文件夹
 define('UPLOAD_IMG_PATH', '/www/img/');
-define('WWW_WEB_IMG', 'http://img.cuihongbo.com/');
+define('WWW_WEB_IMG', 'http://img.zhbor.com/');
 
 //定义系统首页
 define('WWW_WEB', 'http://'.$_SERVER['HTTP_HOST'].'/');

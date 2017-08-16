@@ -43,6 +43,7 @@
                 $output->setTemplate('404'); return;
             }
             $articleInfo['id'] = $articleId;
+            $articleInfo['content'] = str_replace('img.cuihongbo', 'img.zhbor', $articleInfo['content']);
             $articleTags = explode(',', $articleInfo['tags']);
             
             $cateList = LJL_Config::get('Blog_'.ucfirst(APP_BLOG_NAME).'_Cate', 'CATE');
