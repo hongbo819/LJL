@@ -51,6 +51,6 @@ $(function(){
 	$('#face1').qqFace({
 		id : 'facebox1', //表情盒子的ID
 		assign:'message', //给那个控件赋值
-		path:'http://static.cuihongbo.com/images/face/'	//表情存放的路径
+		path:'http://static.zhbor.com/images/face/'	//表情存放的路径
 	});
 });

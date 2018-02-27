@@ -51,7 +51,7 @@ class Auto_Blog_Page_Curlarticle extends Auto_Blog_Page_Abstract {
     //图片上传地址
     private $uploadRootdir = '/www/img/';
     //图片服务器
-    private $imgWeb = 'http://img.cuihongbo.com/';
+    private $imgWeb = 'http://img.zhbor.com/';
     /**
      * 文章抓取程序
      * 执行方式: php index.php server --c=Curlarticle --a=Catcharticle

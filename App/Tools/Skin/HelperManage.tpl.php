@@ -119,7 +119,7 @@ $dataArr = <font class='bl1'>Helper_<?=$funName?></font>(<?=$funcParamStr?>);
 
 
 
-<script type="text/javascript" src="http://static.cuihongbo.com/js/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="http://static.zhbor.com/js/jquery-1.7.1.min.js"></script>
 <script>
 	function jumpPage(val){
 		if(val != "0"){
